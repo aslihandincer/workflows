@@ -58,6 +58,7 @@ inputs:
   type: string
   description: "Desired output filename."
   inputBinding:
+    prefix: "-o"
     position: 2
 
 - id: "input"
@@ -74,9 +75,6 @@ outputs:
     glob: $(inputs.output_name)
 
 baseCommand: ["samtools", "sort"]
-
-arguments:
-  - "-f"
 
 $namespaces:
   s: http://schema.org/
